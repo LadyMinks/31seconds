@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "nl.ladyminks.thirtyoneseconds"
+
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    /**
+     * Has a dependency on the Logic Module.
+     */
+    implementation project(path: ':logic')
+    /**
+     * Has a dependency on the Storage Module.
+     */
+    implementation project(path: ':storage')
+    /**
+     *
+     */
+    implementation project( path: ':presentation')
+    /**
+     * timber : necessary for printing of logs.
+     */
+    implementation "com.jakewharton.timber:timber:${v_timber}"
+}

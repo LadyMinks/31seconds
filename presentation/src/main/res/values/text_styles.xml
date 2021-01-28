@@ -1,0 +1,129 @@
+<resources>
+
+    <style name="Heading1">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_primary_text</item>
+    </style>
+
+    <style name="Heading2Black">
+        <item name="android:textColor">@color/black_primary_text</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Heading2White">
+        <item name="android:textColor">@color/white_primary_text</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ColouredHeading">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primaryColourLight</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlackPrimaryText">
+        <item name="android:textColor">@color/black_primary_text</item>
+    </style>
+
+    <style name="ColouredPrimaryText">
+        <item name="android:textColor">@color/primaryColourLight</item>
+    </style>
+
+    <style name="WarningText">
+        <item name="android:textColor">@color/orange_base</item>
+    </style>
+
+    <style name="ErrorText">
+        <item name="android:textColor">@color/error_color</item>
+    </style>
+
+    <style name="BlackPrimaryText.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BlackPrimaryText.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlackPrimaryText.Italic">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="BlackSecondaryText">
+        <item name="android:textColor">@color/black_secondary_text</item>
+    </style>
+
+    <style name="BlackSecondaryText.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BlackSecondaryText.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BlackSecondaryText.Italic">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="BlackSecondaryText.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlackHintText">
+        <item name="android:textColor">@color/black_disabled_hint_icons</item>
+    </style>
+
+    <style name="BlackHintText.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BlackHintText.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BlackHintText.Small.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WhitePrimaryText">
+        <item name="android:textColor">@color/white_primary_text</item>
+    </style>
+
+    <style name="WhiteSecondaryText">
+        <item name="android:textColor">@color/white_secondary_text</item>
+    </style>
+
+    <style name="WhitePrimaryText.AllCaps">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="WhitePrimaryText.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="WhitePrimaryText.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="WhitePrimaryText.Huge">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="WhiteHintText">
+        <item name="android:textColor">@color/white_disabled_hint_icons</item>
+    </style>
+
+    <style name="WhiteSecondaryText.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="WhiteHintText.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MaterialCounterOverflowText">
+        <item name="android:textColor">@color/error_color</item>
+    </style>
+
+</resources>

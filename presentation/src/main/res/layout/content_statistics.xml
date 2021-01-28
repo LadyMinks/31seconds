@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsWins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatsDraws"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsDraws"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatsLosses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsWins" />
+
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsLosses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatsMostPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsDraws" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsMostPoints"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatsBestRatio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsLosses" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsBestRatio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatsWorstRatio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsMostPoints" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsWorstRatio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatsRivalTeam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsBestRatio" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsRivalTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvStatsTotalPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsWorstRatio" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsTotalPoints"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatsPlayedTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatsRivalTeam" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvStatsPlayedTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvCategoriesWithPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsTotalPoints" />
+
+    <nl.ladyminks.thirtyoneseconds.presentation.ui.StatisticTypeAndUnit
+        android:id="@+id/tvCategoriesWithPoints"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsPlayedTime" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

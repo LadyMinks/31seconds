@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    /**
+     * Has a dependency on the Logic Module.
+     */
+    implementation project(':logic')
+    /**
+     * jackson : necessary to convert Java objects to Json files and vice versa.
+     */
+    implementation "com.fasterxml.jackson.core:jackson-core:${v_jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${v_jackson}"
+    /**
+     * timber : necessary for printing of logs.
+     */
+    implementation "com.jakewharton.timber:timber:${v_timber}"
+    /**
+     * junit : necessary for making of Unit Tests.
+     */
+    testImplementation "junit:junit:${v_junit}"
+}

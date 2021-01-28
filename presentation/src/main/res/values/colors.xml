@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColourLight">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- ========================================================================================-->
+    <!-- Material Design colours: -->
+    <!-- Reference: https://www.google.com/design/spec/style/color.html#color-text-background-colors-->
+
+    <color name="white">#FFFFFF</color>
+    <!-- Dividers are 12% opacity, according to the material design guidelines for colour. -->
+    <color name="white_divider">#1FFFFFFF</color>
+    <!-- Disabled text, hint text, and icons are 50% opacity, according to the material design guidelines for colour. -->
+    <color name="white_disabled_hint_icons">#80FFFFFF</color>
+    <!-- Secondary text is 70% opacity, according to the material design guidelines for colour. -->
+    <color name="white_secondary_text">#B3FFFFFF</color>
+    <!-- Primary text is 100% opacity, according to the material design guidelines for colour. -->
+    <color name="white_primary_text">#FFFFFFFF</color>
+
+    <color name="black">#000000</color>
+    <!-- Dividers are 12% opacity, according to the material design guidelines for colour. -->
+    <color name="black_divider">#1F000000</color>
+    <!-- Disabled text, hint text, and icons are 38% opacity, according to the material design guidelines for colour. -->
+    <color name="black_disabled_hint_icons">#61000000</color>
+    <!-- Secondary text is 54% opacity, according to the material design guidelines for colour. -->
+    <color name="black_secondary_text">#8A000000</color>
+    <!-- Primary text is 87% opacity, according to the material design guidelines for colour. -->
+    <color name="black_primary_text">#DE000000</color>
+
+    <!-- Standard material design error color.
+        Mirrors the private resource at:
+        android.support.v7.appcompat.R.color.error_color_material -->
+    <color name="error_color">#FFF4511E</color>
+
+    <color name="orange_base">#f39c12</color>
+
+    <color name="correct">#8BC34A</color>
+
+</resources>

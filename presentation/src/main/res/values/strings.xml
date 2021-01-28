@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Thirty-One Seconds</string>
+    <string name="action_settings">Settings</string>
+    <string name="thirty_seconds">Thirty-One Seconds</string>
+    <string name="more_teams">More Teams</string>
+    <string name="new_game">New Game</string>
+    <string name="quick_start">Quick Start</string>
+    <string name="title_activity_team_manager">TeamManagerActivity</string>
+    <string name="amount_of_teams">How Many Teams?</string>
+    <string name="number">Please insert a number of teams</string>
+    <string name="input"></string>
+    <string name="input_number">How Many Teams will be playing?</string>
+    <string name="input_prefill">30</string>
+    <string name="input_prefill2">  </string>
+    <string name="input_hint">How many?</string>
+    <string name="add_team"> Add Team </string>
+    <string name="input_string"> Please choose a name</string>
+    <string name="edit_team"> Edit Team Name</string>
+    <string name="random_team"> Random Team Name</string>
+    <string name="toast"> Please select a number of teams.</string>
+    <string name="ready"> Are You Ready?</string>
+    <string name="congratulations"> Congratulations!</string>
+
+    <string name="wins"> Wins:</string>
+    <string name="draws"> Draws:</string>
+    <string name="losses"> Losses:</string>
+    <string name="most_points"> Most Points in Category:</string>
+    <string name="best_ratio"> Best Ratio in Category:</string>
+    <string name="worst_ratio"> WorstRatio in Category:</string>
+    <string name="rival_team"> Your Rival Team is:</string>
+    <string name="total_points"> Total points Scored in all games:</string>
+    <string name="played_time"> Total Time Played in Minutes:</string>
+    <string name="cats_with_points"> somethingsomethingsomething</string>
+
+
+    <string name="manage_teams">Manage Teams</string>
+
+    <!--  Must Be The Same Order As the Enum StopConditionType  -->
+    <string-array name="stop_condition_type_array">
+        <item>Points Reached</item>
+        <item>Time Elapsed</item>
+        <item>Rounds Played</item>
+    </string-array>
+
+
+</resources>

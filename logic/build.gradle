@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+
+    /**
+     * jackson : necessary to convert Java objects to Json files and vice versa.
+     */
+    implementation "com.fasterxml.jackson.core:jackson-core:${v_jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${v_jackson}"
+    implementation 'androidx.annotation:annotation:1.1.0'
+    /**
+     * junit : necessary for making of Unit Tests.
+     */
+    testImplementation "junit:junit:${v_junit}"
+}
