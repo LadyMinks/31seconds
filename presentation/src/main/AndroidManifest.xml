@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nl.minka.ap2thirtyseconds">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="nl.ladyminks.thirtyoneseconds.app.MyApplicationImpl"
         android:allowBackup="true"

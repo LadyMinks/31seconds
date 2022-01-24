@@ -33,7 +33,9 @@
         app:layout_constraintStart_toEndOf="@+id/tvEditTeamName"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/ic_baseline_edit_24"/>
+        android:src="@drawable/ic_baseline_edit_24"
+        style="@style/SquareButtonTheme"/>
+
 
     <ImageButton
         android:id="@+id/btnAutoGenerateAgain"
@@ -45,7 +47,8 @@
         app:layout_constraintStart_toEndOf="@+id/tvEditTeamName"
         app:layout_constraintTop_toBottomOf="@+id/btnEditTeamName"
         app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/ic_baseline_repeat_24"/>
+        android:src="@drawable/ic_baseline_repeat_24"
+        style="@style/SquareButtonTheme"/>
 
 
     <androidx.recyclerview.widget.RecyclerView

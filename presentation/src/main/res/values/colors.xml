@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primaryColourLight">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#4A148C</color>
+    <color name="colorPrimaryDark">#1E083A</color>
+    <color name="colorAccent">#880E4F</color>
+
+    <color name = "buttonBackground">#1B673AB7</color>
+    <color name = "buttonText">#120522</color>
 
     <!-- ========================================================================================-->
     <!-- Material Design colours: -->
@@ -12,7 +15,7 @@
     <!-- Dividers are 12% opacity, according to the material design guidelines for colour. -->
     <color name="white_divider">#1FFFFFFF</color>
     <!-- Disabled text, hint text, and icons are 50% opacity, according to the material design guidelines for colour. -->
-    <color name="white_disabled_hint_icons">#80FFFFFF</color>
+    <color name="white_disabled_hint_icons">#673AB7</color>
     <!-- Secondary text is 70% opacity, according to the material design guidelines for colour. -->
     <color name="white_secondary_text">#B3FFFFFF</color>
     <!-- Primary text is 100% opacity, according to the material design guidelines for colour. -->
@@ -20,7 +23,7 @@
 
     <color name="black">#000000</color>
     <!-- Dividers are 12% opacity, according to the material design guidelines for colour. -->
-    <color name="black_divider">#1F000000</color>
+    <color name="black_divider">#614A148C</color>
     <!-- Disabled text, hint text, and icons are 38% opacity, according to the material design guidelines for colour. -->
     <color name="black_disabled_hint_icons">#61000000</color>
     <!-- Secondary text is 54% opacity, according to the material design guidelines for colour. -->

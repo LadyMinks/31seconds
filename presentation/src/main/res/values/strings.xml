@@ -34,6 +34,9 @@
 
 
     <string name="manage_teams">Manage Teams</string>
+    <string name="_2_teams">2 Teams</string>
+    <string name="_3_teams">3 Teams</string>
+    <string name="_4_teams">4 Teams</string>
 
     <!--  Must Be The Same Order As the Enum StopConditionType  -->
     <string-array name="stop_condition_type_array">

@@ -59,7 +59,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnStatistics"
         app:layout_constraintStart_toEndOf="@+id/tvTeam"
         app:layout_constraintStart_toStartOf="@+id/btnStatistics"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/SquareButtonTheme"/>
 
     <ImageButton
         android:id="@+id/btnStatistics"
@@ -69,7 +70,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvTeam"
-        app:layout_constraintTop_toBottomOf="@+id/btnEditTeam" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEditTeam"
+        style="@style/SquareButtonTheme"/>
 
     <View
         android:layout_width="0dp"

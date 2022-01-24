@@ -46,6 +46,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:src="@drawable/ic_baseline_play_arrow_24"
-        />
+        style="@style/SquareButtonTheme"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
