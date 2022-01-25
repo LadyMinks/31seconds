@@ -8,6 +8,19 @@
     tools:showIn="@layout/activity_custom_game">
 
     <TextView
+        android:id="@+id/tvPlayingFor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin1"
+        android:text="@string/playing_for"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/tvStopConditionUnit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/tvStopConditionUnit"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
@@ -16,32 +29,70 @@
         android:padding="@dimen/margin1"
         android:text="@string/input_prefill"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@id/cvTeams"
+        app:layout_constraintBottom_toTopOf="@id/tvRoundDuration"
         app:layout_constraintEnd_toStartOf="@+id/spnrConditionType"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvPlayingFor" />
 
     <Spinner
         android:id="@+id/spnrConditionType"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvStopConditionUnit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvStopConditionUnit"
         app:layout_constraintTop_toTopOf="@+id/tvStopConditionUnit" />
+
+    <TextView
+        android:id="@+id/tvRoundDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin1"
+        android:text="@string/each_round_lasts"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/tvRoundDurationUnit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStopConditionUnit" />
+
+    <TextView
+        android:id="@+id/tvRoundDurationUnit"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ripple"
+        android:gravity="center"
+        android:padding="@dimen/margin1"
+        android:text="@string/_31"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/cvTeams"
+        app:layout_constraintEnd_toStartOf="@id/tvSeconds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRoundDuration" />
+
+    <TextView
+        android:id="@+id/tvSeconds"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin1"
+        android:text="@string/seconds"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvRoundDurationUnit"
+        app:layout_constraintTop_toTopOf="@+id/tvRoundDurationUnit" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvTeams"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btnPlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvStopConditionUnit">
+        app:layout_constraintTop_toBottomOf="@+id/tvSeconds">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -70,13 +121,14 @@
 
     <ImageButton
         android:id="@+id/btnPlay"
+        style="@style/SquareButtonTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/margin1"
+        android:layout_marginBottom="@dimen/margin3"
         android:src="@drawable/ic_baseline_play_arrow_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvTeams"
-        style="@style/SquareButtonTheme"/>
+        app:layout_constraintTop_toBottomOf="@id/cvTeams" />
 </androidx.constraintlayout.widget.ConstraintLayout>

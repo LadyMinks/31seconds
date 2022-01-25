@@ -36,6 +36,7 @@ public class CustomGameActivity extends AppCompatActivity implements CustomGameV
     private CustomGamePresenter presenter;
     private TextView tvStopConditionUnit;
     private Spinner spnrStopConditionType;
+    private TextView tvRoundDurationUnit;
     private TeamAdapter teamAdapter;
     private RecyclerView rvTeamList;
     private Button btnManageTeams;
@@ -74,12 +75,25 @@ public class CustomGameActivity extends AppCompatActivity implements CustomGameV
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                presenter.saveStopCondition(StopCondition.Type.values()[position]);
             } // to close the onItemSelected
-
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
+        tvRoundDurationUnit = findViewById(R.id.tvRoundDurationUnit);
+        tvRoundDurationUnit.setOnClickListener(view -> new MaterialDialog.Builder(this)
+                .title(R.string.input)
+                .inputType(InputType.TYPE_CLASS_NUMBER)
+                .input(R.string.input_hint, R.string._31, (dialog, input) -> {
+                    try {
+                        int intInput = Integer.parseInt(input.toString());
+                        if (intInput < 5 || intInput > 60) {
+                            Snackbar.make(view, "Changed invalid number to fit within the valid range of 5 to 60.", Snackbar.LENGTH_LONG).show();
+                        }
+                        tvRoundDurationUnit.setText(String.valueOf(Math.max(Math.min(intInput, 60), 5)));
+                    } catch (NumberFormatException e) {
+                        Snackbar.make(view, "Please select a number.", Snackbar.LENGTH_LONG).show();
+                    }
+                }).show());
 
         rvTeamList = findViewById(R.id.rvTeamList);
         rvTeamList.setLayoutManager(new LinearLayoutManager((this)));
@@ -90,7 +104,7 @@ public class CustomGameActivity extends AppCompatActivity implements CustomGameV
         btnManageTeams.setOnClickListener(view -> presenter.manageTeams());
 
         btnPlay = findViewById(R.id.btnPlay);
-        btnPlay.setOnClickListener(view -> presenter.startCustomGame(Integer.parseInt(tvStopConditionUnit.getText().toString())));
+        btnPlay.setOnClickListener(view -> presenter.startCustomGame(Integer.parseInt(tvStopConditionUnit.getText().toString()), Integer.parseInt(tvRoundDurationUnit.getText().toString())));
 
         presenter.onCreate();
     }

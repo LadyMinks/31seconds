@@ -83,11 +83,12 @@ public class GamePresenter {
      * this method calculates the 30 seconds timer.
      */
     public void updateTimer() {
+        int roundDurationUnit = game.getTurnDuration() * 1000;
         if (turn == null) {
             return;
         }
         long now = System.currentTimeMillis();
-        long targetTime = turn.getTurnStartTime() + 30000;
+        long targetTime = turn.getTurnStartTime() + roundDurationUnit;
         long timeLeft = targetTime - now;
         turnPage.displayTimeLeft(timeLeft);
         if (timeLeft <= 0) {

@@ -148,7 +148,6 @@ public class Game implements Serializable {
             } else {
                 return 0;
             }
-
         });
         return sortedTeams;
     }

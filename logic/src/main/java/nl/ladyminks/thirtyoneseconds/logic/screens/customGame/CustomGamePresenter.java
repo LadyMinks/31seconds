@@ -23,6 +23,7 @@ public class CustomGamePresenter {
     private final List<Team> teams = new ArrayList<>();
     private final GameFactory gameFactory;
     private StopCondition.Type stopConditionType;
+    private int roundDurationUnit;
 
     public CustomGamePresenter(CustomGameView customGameView, TeamsRepository teamsRepository, StatisticsFactory statisticsFactory, GameFactory gameFactory) {
         this.customGameView = customGameView;
@@ -67,12 +68,12 @@ public class CustomGamePresenter {
         customGameView.displayTeams(playingTeams, statisticsForTeam);
     }
 
-    public void startCustomGame(int stopConditionUnit) {
+    public void startCustomGame(int stopConditionUnit, int roundDurationUnit) {
         List<Team> playingTeams = new ArrayList<>();
         for (int i = 0; i < selectedTeamIndexes.size(); i++) {
             playingTeams.add(teams.get(selectedTeamIndexes.get(i)));
         }
-        Game customGame = gameFactory.createCustomGame(playingTeams, new StopCondition(stopConditionType, stopConditionUnit));
+        Game customGame = gameFactory.createCustomGame(playingTeams, new StopCondition(stopConditionType, stopConditionUnit), roundDurationUnit);
         customGameView.startGame(customGame);
     }
 
@@ -80,4 +81,7 @@ public class CustomGamePresenter {
         this.stopConditionType = stopConditionType;
     }
 
+    public void saveRoundDurationUnit(int roundDurationUnit){
+        this.roundDurationUnit = roundDurationUnit;
+    }
 }

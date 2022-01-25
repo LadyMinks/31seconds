@@ -17,7 +17,7 @@ import nl.ladyminks.thirtyoneseconds.logic.repositories.TeamsRepository;
 public class GameFactory {
 
     static final StopCondition DEFAULT_STOP_CONDITION = new StopCondition(StopCondition.Type.POINTS_REACHED, 30);
-    static final int DEFAULT_TURN_DURATION = 30;
+    static final int DEFAULT_TURN_DURATION = 31;
 
     private final NameFactory nameFactory;
     private final CategoryRepository categoryRepository;
@@ -47,7 +47,7 @@ public class GameFactory {
         return new Game(System.currentTimeMillis(), teamList, DEFAULT_TURN_DURATION, DEFAULT_STOP_CONDITION, new GameLog());
     }
 
-    public Game createCustomGame(List<Team> teams, StopCondition stopCondition){
-        return new Game(System.currentTimeMillis(),  teams, DEFAULT_TURN_DURATION, stopCondition, new GameLog());
+    public Game createCustomGame(List<Team> teams, StopCondition stopCondition, int roundDurationUnit){
+        return new Game(System.currentTimeMillis(),  teams, roundDurationUnit, stopCondition, new GameLog());
     }
 }

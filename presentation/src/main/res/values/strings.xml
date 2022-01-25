@@ -37,6 +37,10 @@
     <string name="_2_teams">2 Teams</string>
     <string name="_3_teams">3 Teams</string>
     <string name="_4_teams">4 Teams</string>
+    <string name="playing_for">Playing For</string>
+    <string name="each_round_lasts">Each Round Lasts</string>
+    <string name="seconds">Seconds</string>
+    <string name="_31">31</string>
 
     <!--  Must Be The Same Order As the Enum StopConditionType  -->
     <string-array name="stop_condition_type_array">
