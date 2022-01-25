@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin1"
         android:layout_marginStart="@dimen/margin1"
+        android:paddingHorizontal="@dimen/margin1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvTeamScore"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +19,7 @@
 
     <TextView
         android:id="@+id/tvTeamScore"
-        android:layout_width="0dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin1"
         android:layout_marginStart="@dimen/margin1"
