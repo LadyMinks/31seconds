@@ -18,6 +18,7 @@ import nl.ladyminks.thirtyoneseconds.logic.domain.Question;
 public class SelectableQuestion extends FrameLayout {
 
     private TextView tvQuestion;
+    private TextView tvCategory;
     private Question question;
     private boolean correct = false;
 
@@ -45,6 +46,7 @@ public class SelectableQuestion extends FrameLayout {
         final LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.cv_question, this);
         this.tvQuestion = findViewById(R.id.tvQuestion);
+        this.tvCategory = findViewById(R.id.tvCategory);
         this.setOnClickListener(view -> {
             correct = !correct;
             if (correct) {
@@ -58,6 +60,7 @@ public class SelectableQuestion extends FrameLayout {
     public void setQuestion(Question question) {
         this.question = question;
         tvQuestion.setText(question.getName());
+        tvCategory.setText(question.getCategory().getName());
         correct = false;
         this.setBackgroundResource(R.color.white);
     }
