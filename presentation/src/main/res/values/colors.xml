@@ -23,7 +23,7 @@
 
     <color name="black">#000000</color>
     <!-- Dividers are 12% opacity, according to the material design guidelines for colour. -->
-    <color name="black_divider">#614A148C</color>
+    <color name="divider">#614A148C</color>
     <!-- Disabled text, hint text, and icons are 38% opacity, according to the material design guidelines for colour. -->
     <color name="black_disabled_hint_icons">#61000000</color>
     <!-- Secondary text is 54% opacity, according to the material design guidelines for colour. -->
