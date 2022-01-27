@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ import nl.ladyminks.thirtyoneseconds.logic.screens.game.TurnPage;
 public class TurnPageImpl extends FrameLayout implements TurnPage {
 
     private TextView tvDisplaySecondsLeft;
+    private ProgressBar pbTimeLeft;
     private final List<SelectableQuestion> selectableQuestions = new ArrayList<>();
     private ImageButton btnConfirm;
     private GamePresenter gamePresenter;
@@ -61,6 +63,7 @@ public class TurnPageImpl extends FrameLayout implements TurnPage {
         selectableQuestions.add((SelectableQuestion) findViewById(R.id.qcFifthQuestion));
 
         this.tvDisplaySecondsLeft = findViewById(R.id.tvDisplaySecondsLeft);
+        this.pbTimeLeft = findViewById(R.id.pbTimeLeft);
 
         this.btnConfirm = findViewById(R.id.btnConfirm);
         btnConfirm.setOnClickListener(new View.OnClickListener() {
@@ -99,10 +102,15 @@ public class TurnPageImpl extends FrameLayout implements TurnPage {
     }
 
     @Override
-    public void displayTimeLeft(long timeLeft) {
+    public void displayTimeLeft(long timeLeft, int roundDuration) {
         //TODO: String res inst String
-        tvDisplaySecondsLeft.setText("TIME LEFT: " + timeLeft/1000 + " SECONDS");
+        tvDisplaySecondsLeft.setText("TIME LEFT:\n" + timeLeft/1000 + " SECONDS");
+        int countdown = (int) timeLeft;
+        pbTimeLeft.setMax(roundDuration);
+        pbTimeLeft.setSecondaryProgress(roundDuration);
+        pbTimeLeft.setProgress(countdown);
     }
+
     public void setGamePresenter(GamePresenter gamePresenter) {
         this.gamePresenter = gamePresenter;
     }

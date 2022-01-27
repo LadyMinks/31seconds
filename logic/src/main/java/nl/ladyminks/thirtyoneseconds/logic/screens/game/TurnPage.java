@@ -35,5 +35,5 @@ public interface TurnPage {
      *
      * @param timeLeft time left in milliseconds.
      */
-    void displayTimeLeft(long timeLeft);
+    void displayTimeLeft(long timeLeft, int roundDuration);
 }

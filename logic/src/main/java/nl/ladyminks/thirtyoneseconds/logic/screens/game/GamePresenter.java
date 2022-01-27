@@ -90,7 +90,7 @@ public class GamePresenter {
         long now = System.currentTimeMillis();
         long targetTime = turn.getTurnStartTime() + roundDurationUnit;
         long timeLeft = targetTime - now;
-        turnPage.displayTimeLeft(timeLeft);
+        turnPage.displayTimeLeft(timeLeft, roundDurationUnit);
         if (timeLeft <= 0) {
             stopTurn();
         }
