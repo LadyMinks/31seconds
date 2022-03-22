@@ -23,7 +23,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
      * Name of the directory in assets that contains all of the categories. Each file in this
      * directory should be a Json file containing a single category.
      */
-    private static final String DIRECTORY_NAME = "categories/";
+    private static final String DIRECTORY_NAME = "categories";
     private final ObjectMapper mapper = new ObjectMapper();
     private final Context context;
 
@@ -53,7 +53,6 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     // bufferedREader: stream of bytes -> buffered -> chunks of bytes at once.
 
     /**
-     *
      * @param fileName
      * @return
      */
@@ -61,7 +60,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
         try {
             final StringBuilder stringBuilder = new StringBuilder();
             final InputStreamReader inputStreamReader =
-                    new InputStreamReader(context.getAssets().open(DIRECTORY_NAME + fileName));
+                    new InputStreamReader(context.getAssets().open(DIRECTORY_NAME + "/" + fileName));
             try (BufferedReader reader = new BufferedReader(inputStreamReader)) {
                 String line = reader.readLine();
                 while (line != null) {
@@ -77,7 +76,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             return category;
         } catch (IOException e) {
             Timber.w(e);
-            throw new RuntimeException("failed to load category " + DIRECTORY_NAME + fileName);
+            throw new RuntimeException("failed to load category " + DIRECTORY_NAME + "/" + fileName);
         }
     }
 

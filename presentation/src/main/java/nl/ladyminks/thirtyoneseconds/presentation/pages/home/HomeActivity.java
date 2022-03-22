@@ -7,20 +7,17 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
-import nl.ladyminks.thirtyoneseconds.presentation.MyApplication;
-import nl.minka.ap2thirtyseconds.R;
-import nl.ladyminks.thirtyoneseconds.presentation.pages.game.GameActivity;
-import nl.ladyminks.thirtyoneseconds.presentation.pages.customgame.CustomGameActivity;
-import nl.ladyminks.thirtyoneseconds.presentation.pages.teammanager.TeamManagerActivity;
 import nl.ladyminks.thirtyoneseconds.logic.domain.Game;
 import nl.ladyminks.thirtyoneseconds.logic.screens.home.HomePresenter;
 import nl.ladyminks.thirtyoneseconds.logic.screens.home.HomeView;
+import nl.ladyminks.thirtyoneseconds.presentation.MyApplication;
+import nl.ladyminks.thirtyoneseconds.presentation.pages.customgame.CustomGameActivity;
+import nl.ladyminks.thirtyoneseconds.presentation.pages.game.GameActivity;
+import nl.ladyminks.thirtyoneseconds.presentation.pages.teammanager.TeamManagerActivity;
+import nl.minka.ap2thirtyseconds.R;
 
 public class HomeActivity extends AppCompatActivity implements HomeView {
 
@@ -46,9 +43,9 @@ public class HomeActivity extends AppCompatActivity implements HomeView {
         MyApplication myApplication = (MyApplication) getApplicationContext();
         this.presenter = myApplication.getPresenterFactory().createHomePresenter(this);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(view -> Snackbar.make(view, "This Button shows statistics", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show());
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(view -> Snackbar.make(view, "This Button shows statistics", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show());
 
         tvName = findViewById(R.id.tvName);
         btnQuickStart2 = findViewById(R.id.btnQuickStart2);
@@ -93,9 +90,9 @@ public class HomeActivity extends AppCompatActivity implements HomeView {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }

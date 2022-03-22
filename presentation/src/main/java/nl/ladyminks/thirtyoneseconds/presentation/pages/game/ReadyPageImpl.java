@@ -10,11 +10,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import nl.minka.ap2thirtyseconds.R;
-import nl.ladyminks.thirtyoneseconds.presentation.ui.TeamGameScore;
 import nl.ladyminks.thirtyoneseconds.logic.domain.Team;
 import nl.ladyminks.thirtyoneseconds.logic.screens.game.GamePresenter;
 import nl.ladyminks.thirtyoneseconds.logic.screens.game.ReadyPage;
+import nl.ladyminks.thirtyoneseconds.presentation.ui.TeamGameScore;
+import nl.minka.ap2thirtyseconds.R;
 
 /**
  * @author Minka Firth
@@ -26,6 +26,7 @@ public class ReadyPageImpl extends FrameLayout implements ReadyPage {
     private TextView tvReady;
     private TextView tvPlayingTeam;
     private ImageButton btnIsReady;
+    private TextView three;
     private GamePresenter gamePresenter;
 
     public ReadyPageImpl(@NonNull Context context) {
@@ -55,7 +56,11 @@ public class ReadyPageImpl extends FrameLayout implements ReadyPage {
         this.tvPlayingTeam = findViewById(R.id.tvPlayingTeam);
         this.btnIsReady = findViewById(R.id.btnIsReady);
         this.scoreBoard = findViewById(R.id.scoreBoard);
-        btnIsReady.setOnClickListener(view -> gamePresenter.startTurn());
+        this.three = findViewById(R.id.three);
+//        three.setVisibility();
+        btnIsReady.setOnClickListener(view ->
+
+                gamePresenter.startTurn());
     }
 
     @Override
@@ -80,4 +85,6 @@ public class ReadyPageImpl extends FrameLayout implements ReadyPage {
     public void setGamePresenter(GamePresenter gamePresenter) {
         this.gamePresenter = gamePresenter;
     }
+
+
 }
