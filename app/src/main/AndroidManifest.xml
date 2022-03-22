@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="nl.ladyminks.thirtyoneseconds.app">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="nl.ladyminks.thirtyoneseconds.app.MyApplicationImpl"
@@ -16,9 +16,10 @@
         <activity android:name="nl.ladyminks.thirtyoneseconds.presentation.pages.game.GameActivity" />
         <activity android:name="nl.ladyminks.thirtyoneseconds.presentation.pages.editteam.EditTeamActivity" />
         <activity android:name="nl.ladyminks.thirtyoneseconds.presentation.pages.teammanager.TeamManagerActivity" />
-        <activity android:name="nl.ladyminks.thirtyoneseconds.presentation.pages.statistics.StatisticsActivity"/>
+        <activity android:name="nl.ladyminks.thirtyoneseconds.presentation.pages.statistics.StatisticsActivity" />
         <activity
             android:name="nl.ladyminks.thirtyoneseconds.presentation.pages.home.HomeActivity"
+            android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
