@@ -7,7 +7,7 @@ import nl.ladyminks.thirtyoneseconds.presentation.PresenterFactory;
 import timber.log.Timber;
 
 /**
- * @author Minka Firth
+ * @author Minka Firth asdasdasdasdasd
  */
 public class MyApplicationImpl extends Application implements MyApplication {
 
